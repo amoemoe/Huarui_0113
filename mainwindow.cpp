@@ -87,8 +87,6 @@ void mainwindow::restUpdate(void)
 void mainwindow::workUpdate(void)
 {
     if(isWorkMode){
-        // 每秒计数器加1
-        // 判断是否需要进位到分钟
         if (work1 == 60){
             work1 = 0; // 秒归零
             ++work2; // 分钟加1
@@ -110,7 +108,6 @@ void mainwindow::workUpdate(void)
 
 void mainwindow::timerUpdate2(void)
 {
-    // 更新 QLabel 显示的文本
     if (isWorkMode) {
         QString timeStr = QString("Work Remain\n%1:%2:%3")
                               .arg(count3, 2, 10, QChar('0'))
